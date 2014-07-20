@@ -32,6 +32,22 @@ function submitEmail(email, $response) {
 	});
 }
 
+(function($) {
+    $.fn.goTo = function() {
+        $('html, body').animate({
+            scrollTop: $(this).offset().top + 'px'
+        }, 1000);
+        return this; // for chaining...
+    }
+})(jQuery);
+
+function registerScroll(el) {
+	$('.scroll-to-' + el).click(function(){
+		console.log('scrolling to ' + el);
+		$('.' + el).goTo();
+	});
+}
+
 $(function(){
 	var field = $('.email-form-field'),
 		button = $('.notify-me')
@@ -56,4 +72,8 @@ $(function(){
 		var emailField = $('.email-form-field');
 		submitEmail(emailField.val(), $('.response'));
 	});
+
+	registerScroll('features');
+	registerScroll('pricing');
+	registerScroll('invites');
 })

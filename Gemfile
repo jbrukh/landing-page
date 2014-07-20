@@ -52,4 +52,4 @@ end
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'google-webfonts'
-gem "font-awesome-rails"
+gem "font-awesome-rails", '~> 4.1.0'
