@@ -1,0 +1,111 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+@mixin default-font {
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+$dark-color: #173336;
+$light-color: #737e89;
+
+body {
+	text-align: center;
+}
+
+.top-nav {
+	width: 100%;
+	font-size: 2em;
+	@include default-font;
+	font-weight: 400;
+	text-align: left;
+	a {
+		text-decoration: none;
+		color: $dark-color;
+	}
+	.social-icons {
+		float: right;
+		padding: 1em;
+	}
+}
+
+.bottom-nav {
+	$nav-height: 20em;
+	height: $nav-height;
+	line-height: $nav-height;
+	background-color: $dark-color;
+	color: $light-color;
+	@include default-font;
+}
+
+.hero {
+	@include default-font;
+	background-color: lightblue;
+	color: white;
+	padding: 10em 0em;
+
+	h1 {
+		font-size: 3.5em;
+		font-weight: 100;
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	.description {
+		margin: 1em 0em .5em 0em;
+	}
+
+	.tagline {
+		letter-spacing: .1em;
+		margin-bottom: 2em;
+	}
+
+	.notify-me {
+		background-color: $dark-color;
+		color: $light-color;
+		padding: 1.01em;
+		border-radius: .3em;
+		cursor: pointer;
+	}
+}
+
+.features {
+	background-color: white;
+	padding: 10em 0em;
+}
+
+#email-form {
+	padding: 0em 2em 2em 2em;
+	margin-top: 5em;
+	.email-form-field {
+		border: 0;
+		padding: 1em;
+		color: $light-color;
+		border-radius: .3em;
+		outline: none;
+		margin-bottom: 1em;
+	}
+}
+
+
+.logo {
+	height: 1em;
+	margin: 1em;
+}

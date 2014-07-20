@@ -12,5 +12,48 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
+
+var firstTime = true;
+var msg = 'Enter your email address...';
+
+function submitEmail(email, $response) {
+	$.ajax({
+		url: '/api/users',
+		type: 'post',
+		data: {
+			email: email
+		}
+	}).success(function(e){
+		$response.text('Stay tuned for updates!');
+	}).error(function(e){
+		$response.text('This email is invalid.');
+	});
+}
+
+$(function(){
+	var field = $('.email-form-field'),
+		button = $('.notify-me')
+	    form = $('#email-form');
+
+	field.click(function(){
+		if (firstTime) {
+			field.val('');
+			firstTime = false;
+		}
+	});
+
+	field.focusout(function(){
+		if (field.val() == '') {
+			field.val(msg);
+			firstTime = true;
+		}
+	});
+
+	button.click(function(){
+		console.log('click');
+		var emailField = $('.email-form-field');
+		submitEmail(emailField.val(), $('.response'));
+	});
+})
