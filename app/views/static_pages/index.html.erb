@@ -3,34 +3,71 @@
 		<h1><strong>Pay your rent online.</strong> We'll send the check.</h1>
 	</div>
 	<div class="col-xs-12 col-sm-6 col-sm-offset-3 tagline">
-		<h2>Use your bank account, debit card, or credit card to send payment to any landlord.</h2>
+		<h3>Use your bank account, debit card, or credit card to send payment to any landlord.</h3>
 	</div>
-	<span class="col-xs-4 col-xs-offset-4">
-		<div class="notify-me scroll-to-invites">Request an invitation</div>
-	</span>
+	<span class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4">
+		<div class="notify-me" data-toggle="modal" data-target="#invitation-modal">
+			Request an invitation
+		</div>
 
+		<!-- Modal -->
+		<div class="modal" id="invitation-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        <h1>Get an invitation to Checky.co.</h1>
+				<%= text_field_tag :email, 'Enter your email address...', :class => 'email-form-field' %>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</span>
+	
 </div>
 
 <div class="row subhero info-row">
-
-
+	<div class="col-sm-5 col-sm-offset-1">
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+				<h1><%= fa_icon "credit-card" %></h1>
+			</div>
+		</div>
+		<h3>Pay online with your bank account, debit card, or credit card.</h3>
+	</div>
+	<div class="col-sm-5 col-sm-offset-0">
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+				<h1><%= fa_icon "comment-o" %></h1>
+			</div>
+		</div>
+		<h3>Split rent with your roommates and receive reminders.</h3>
+	</div>
 </div>
 
 <div class="row features info-row">
-		* Pay online with your bank account, debit card, or credit card.
-		* Split rent with your roommates.
-		* Make use of rent reminders.
 </div>
 
+
 <div class="row pricing info-row">
+	<div class="col-xs-12">
+		<h1><strong>Pay how you wish.</strong> We bring you the lowest fees.</h1>
+	</div>
+	<div class="col-xs-12">
+		<%= image_tag("visa-64.png", :alt => "Visa", :class => 'cc-icon') %>
+		<%= image_tag("mastercard-64.png", :alt => "Visa", :class => 'cc-icon') %>
+		<%= image_tag("discover-64.png", :alt => "Visa", :class => 'cc-icon') %>
+		<%= image_tag("american-express-64.png", :alt => "Visa", :class => 'cc-icon') %>
+	</div>
 	Bank Account: $4.99
 	Debit Card: 1%
 	Credit Card: 2%
 
-	* Pricing is subject to change.
+	<span class="subtext">* Pricing is subject to change.</span>
 </div>
 
 <div class="row invites info-row">
-	<h1></h1>
-	<%= text_field_tag :email, 'Enter your email address...', :class => 'email-form-field col-xs-4 col-xs-offset-4' %>
+	<h1>Get an invitation to Checky.co.</h1>
+	<%= text_field_tag :email, 'Enter your email address...', :class => 'email-form-field col-xs-3 col-xs-offset-4' %>
+	<span class="invite-me col-xs-1">Invite me</span>
+	<div class="response col-xs-12"></div>
 </div>

@@ -1,0 +1,36 @@
+.margin-1 {
+	margin-bottom: 1em;
+}
+
+.margin-2 {
+	margin-bottom: 2em;
+}
+
+.subtext {
+	font-size: .75em;
+	font-style: italic;
+}
+
+@mixin cta-button($color) {
+	color: $color;
+	border: 2px solid $color;
+	padding: 1.01em;
+	border-radius: .3em;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+@mixin text-field($bg-col, $fg-col, $outline-border: false) {
+	padding: 1.1em;
+	color: $fg-col;
+	border-radius: .3em;
+	outline: none;
+	@if $outline-border == true {
+		background-color: initial;
+		border: 1px solid $bg-col;
+	}
+	@else {
+		border: 0;
+		background-color: $bg-col;
+	}
+}

@@ -27,6 +27,7 @@ function submitEmail(email, $response) {
 		}
 	}).success(function(e){
 		$response.text('Stay tuned for updates!');
+		$('.hero').goTo();
 	}).error(function(e){
 		$response.text('This email is invalid.');
 	});
@@ -50,7 +51,7 @@ function registerScroll(el) {
 
 $(function(){
 	var field = $('.email-form-field'),
-		button = $('.notify-me')
+		button = $('.invite-me')
 	    form = $('#email-form');
 
 	field.click(function(){
