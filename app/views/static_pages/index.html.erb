@@ -22,7 +22,7 @@
 		  </div>
 		</div>
 	</span>
-	
+
 </div>
 
 <div class="row subhero info-row">
@@ -32,7 +32,7 @@
 				<h1><%= fa_icon "credit-card" %></h1>
 			</div>
 		</div>
-		<h3>Pay online with your bank account, debit card, or credit card.</h3>
+		<h3>Pay your rent online with your bank account, debit card, or credit card.</h3>
 	</div>
 	<div class="col-sm-5 col-sm-offset-0">
 		<div class="row">
@@ -40,7 +40,7 @@
 				<h1><%= fa_icon "comment-o" %></h1>
 			</div>
 		</div>
-		<h3>Split rent with your roommates and receive reminders.</h3>
+		<h3>Split rent with your roommates and receive rent reminders.</h3>
 	</div>
 </div>
 
@@ -49,20 +49,41 @@
 
 
 <div class="row pricing info-row">
-	<div class="col-xs-12">
-		<h1><strong>Pay how you wish.</strong> We bring you the lowest fees.</h1>
+	<div class="row">
+		<div class="col-xs-12 margin-2">
+			<h1>Take advantage of online payments.</h1>
+		</div>
 	</div>
-	<div class="col-xs-12">
+	<div class="row">
+	<div class="col-xs-12 margin-2">
+		<%= fa_icon "university", :alt => "eCheck", :class => 'cc-icon' %>
 		<%= image_tag("visa-64.png", :alt => "Visa", :class => 'cc-icon') %>
 		<%= image_tag("mastercard-64.png", :alt => "Visa", :class => 'cc-icon') %>
 		<%= image_tag("discover-64.png", :alt => "Visa", :class => 'cc-icon') %>
 		<%= image_tag("american-express-64.png", :alt => "Visa", :class => 'cc-icon') %>
 	</div>
-	Bank Account: $4.99
-	Debit Card: 1%
-	Credit Card: 2%
-
-	<span class="subtext">* Pricing is subject to change.</span>
+	</div>
+	<div class="row">
+	<div class="col-xs-12 margin-2">
+		<table class="price-table">
+			<tr>
+			  <td>Bank Account</td>
+			  <td>$7.99</td>
+			</tr>
+			<tr>
+			  <td>Debit Card</td>
+			  <td>1.5%</td>
+			</tr>
+			<tr>
+			  <td>Credit Card</td>
+			  <td>2%</td>
+			</tr>
+		</table>
+	</div>
+	</div>
+	<div class="row">
+	<div class="subtext col-xs-12">Prices quoted are per customer per transaction. Quoted prices are subject to change.</div>
+	</div>
 </div>
 
 <div class="row invites info-row">

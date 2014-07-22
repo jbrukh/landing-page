@@ -56,10 +56,10 @@ body {
 	.navigation-buttons {
 		text-transform: uppercase;
 		span {
-			margin-top: .9em;
+			margin-top: 1.1em;
 			float: right;
 			margin-right: 1em;
-			font-size: .9em;
+			font-size: .8em;
 			font-weight: lighter;
 		}
 		cursor: pointer;
@@ -72,7 +72,7 @@ body {
 	}
 
 	.logo {
-		height: 1em;
+		height: .8em;
 		margin: 1em;
 	}
 }
@@ -86,7 +86,7 @@ body {
 		border-radius: 50%;
 		width: 3em;
 		height: 3em;
-		padding-top: 1.1em;
+		padding-top: 1em;
 		&:not(:last-child) {
 			margin-right: 1em;
 		}
@@ -140,8 +140,22 @@ body {
 
 .pricing {
 	@include info-section-light;
+	.cc-icon.fa {
+		color: white;
+		background-color: rgb(90, 90, 90);
+		padding: 1em 1.8em;
+		border-radius: .25em;
+	}
 	.cc-icon:not(:last-child) {
 		margin-right: 1em;
+	}
+
+	.price-table {
+		margin: 0 auto;
+		text-align: left;
+		td {
+			padding: .5em 1em;
+		}
 	}
 }
 
