@@ -27,7 +27,7 @@ function submitEmail(email, $response) {
 		}
 	}).success(function(e){
 		$response.text('Stay tuned for updates!');
-		$('.hero').goTo();
+		$('.email-form-field').attr('disabled', 'disabled');
 	}).error(function(e){
 		$response.text('This email is invalid.');
 	});
@@ -69,9 +69,10 @@ $(function(){
 	});
 
 	button.click(function(){
-		console.log('click');
-		var emailField = $('.email-form-field');
-		submitEmail(emailField.val(), $('.response'));
+		var email = $('.email-form-field').val();
+		console.log('click : ' + email);
+	
+		submitEmail(email, $('.response'));
 	});
 
 	registerScroll('features');
