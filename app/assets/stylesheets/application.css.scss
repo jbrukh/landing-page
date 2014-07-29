@@ -22,10 +22,10 @@
 $col-dark: #173336;
 $col-light: #737e89;
 $col-space: white;
-$col-section-1: lightblue;
+$col-section-1: #47646d;
 
 body {
-	font-family: 'Open Sans', Arial, sans-serif;
+	font-family: 'Dosis', Arial, sans-serif;
 	text-align: center;
 }
 
@@ -44,6 +44,7 @@ body {
 	font-size: 2em;
 	font-weight: 400;
 	text-align: left;
+	padding-top: 1.5em;
 	a {
 		text-decoration: none;
 		color: $col-dark;
@@ -72,9 +73,10 @@ body {
 	}
 
 	.logo {
-		height: .8em;
+		height: .6em;
 		margin: 1em;
 	}
+
 }
 
 .bottom-nav {
@@ -104,7 +106,7 @@ body {
 }
 
 .hero {
-	background-color: lightblue;
+	background-color: $col-section-1;
 	color: white;
 
 	.tagline {
@@ -116,14 +118,66 @@ body {
 		@include cta-button($col-space);
 		font-size: 1.5em;
 	}
-	h2,h3,h4,h5,h6 {
-		font-weight: lighter
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: 100;
+	}
+
+	h1 {
+		font-size: 5em;
+		font-weight: 400;
+	}
+
+	.envelope {
+		height: 20em;
+		margin-top: 2em;
+
+		cursor: pointer;
+	}
+
+	.cta {
+		margin-top: 2em;
+		.email-input {
+			padding: 0;
+			color: $col-dark;
+			text-transform: uppercase;
+			input {
+				width: 100%;
+				border: 0;
+				outline: none;
+				padding: .5em;
+			}
+		}
+
+		.submit-button {
+			background-color: darkgrey;
+			padding: .5em;
+			cursor: pointer;
+		}
+	}
+
+	.modal-content {
+		background-color: $col-dark;
+		color: $col-space;
 	}
 
 	.modal-body {
-		color: $col-dark;
+		padding: 4em;
+		text-align: center;
 		input {
-			@include text-field($col-dark, $col-light, $outline-border: true);
+			@include text-field($col-space, $col-space, $outline-border: true);
+			padding-right: 1em;
+		}
+		.logo {
+			width: 100%;
+			margin-bottom: 2em;
+		}
+		.copy {
+			font-size: 3.7em;
+			margin-bottom: 2em;
+		}
+
+		.invite-me {
+			@include cta-button($col-space);
 		}
 	}
 }
@@ -151,6 +205,7 @@ body {
 	}
 
 	.price-table {
+		font-size: 2em;
 		margin: 0 auto;
 		text-align: left;
 		td {
