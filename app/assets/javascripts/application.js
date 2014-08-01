@@ -18,16 +18,16 @@
 var firstTime = true;
 var msg = 'Enter your email address...';
 
-function submitEmail(email, $response) {
+function submitEmail($emailInput, $response) {
 	$.ajax({
 		url: '/api/users',
 		type: 'post',
 		data: {
-			email: email
+			email: $emailInput.val()
 		}
 	}).success(function(e){
 		$response.text('Stay tuned for updates!');
-		$('.email-form-field').attr('disabled', 'disabled');
+		$emailInput.attr('disabled', 'disabled');
 	}).error(function(e){
 		$response.text('This email is invalid.');
 	});
@@ -50,9 +50,8 @@ function registerScroll(el) {
 }
 
 $(function(){
-	var field = $('.email-form-field'),
-		button = $('.invite-me')
-	    form = $('#email-form');
+	var field = $('#email-input'),
+		button = $('.submit-button');
 
 	field.click(function(){
 		if (firstTime) {
@@ -69,10 +68,7 @@ $(function(){
 	});
 
 	button.click(function(){
-		var email = $('.email-form-field').val();
-		console.log('click : ' + email);
-	
-		submitEmail(email, $('.response'));
+		submitEmail(field, $('.response'));
 	});
 
 	registerScroll('features');

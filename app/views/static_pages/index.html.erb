@@ -40,12 +40,15 @@
 	</div>
 	<div class="row cta">
 		<div class="col-lg-3 col-lg-offset-4 email-input">
-			<%= text_field_tag :email, 'Enter your email address...' %>
+			<%= text_field_tag :email, 'Enter your email address...', :id => 'email-input' %>
 		</div>
 		<div class="col-lg-1 submit-button">
 			Invite me
 		</div>
 	</div>
+</div>
+<div class="row">
+	<div class="response col-xs-12"></div>
 </div>
 
 <div class="row subhero info-row">
@@ -107,11 +110,4 @@
 	<div class="row">
 	<div class="subtext col-xs-12">Prices quoted are per customer per transaction. Quoted prices are subject to change.</div>
 	</div>
-</div>
-
-<div class="row invites info-row">
-	<h1>Get an invitation to Checky.co.</h1>
-	<%= text_field_tag :email, 'Enter your email address...', :class => 'email-form-field col-xs-3 col-xs-offset-4' %>
-	<span class="invite-me col-xs-1">Invite me</span>
-	<div class="response col-xs-12"></div>
 </div>
