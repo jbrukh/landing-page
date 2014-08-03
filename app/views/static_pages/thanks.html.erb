@@ -1,0 +1,9 @@
+<div class="row info-row">
+	<div class="col-xs-12">
+		<h1>Thanks!</h1>
+		<h2>And don't forget your friends.</h2>
+		<% if @obf_id %>
+				<%= text_field_tag :refcode, 'http://rentvelope.com/?ref='+@obf_id %>
+		<% end %>
+	</div>
+</div>

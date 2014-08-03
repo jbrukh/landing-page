@@ -144,34 +144,38 @@ h2,h3,h4,h5,h6 {
 		@include cta-button($col-space);
 		font-size: 1.5em;
 	}
-
-	.envelope {
-		height: 20em;
-		margin-top: 2em;
-
-		cursor: pointer;
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: 100;
 	}
 
-	.cta {
-		$padding: .6em;
-		margin: 3em;
-		text-transform: uppercase;
+	h1 {
+		font-size: 5em;
+		font-weight: 400;
+	}
+
+		margin-top: 2em;
 		.email-input {
 			padding: 0;
 			color: $col-dark;
+			text-transform: uppercase;
 			input {
 				width: 100%;
 				border: 0;
 				outline: none;
-				padding: $padding;
+				padding: .5em;
 			}
 		}
 
 		.submit-button {
-			background-color: $col-dark-2;
-			padding: $padding;
+			background-color: darkgrey;
+			padding: .5em;
 			cursor: pointer;
 		}
+	}
+
+	.modal-content {
+		background-color: $col-dark;
+		color: $col-space;
 	}
 
 	.modal-content {
@@ -237,7 +241,10 @@ h2,h3,h4,h5,h6 {
 		margin: 0 auto;
 		text-align: left;
 		td {
-			padding: .25em 1em;
+			padding: .5em 1em;
+			&:last-child {
+				font-size: .5em;
+			}
 		}
 	}
 }
