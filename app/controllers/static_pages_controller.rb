@@ -4,10 +4,10 @@ class StaticPagesController < ApplicationController
 
   @@hashids = Hashids.new('salt', 8)
 
-  # index  
+  # index
   def index
   	ref = params[:ref]
-  	if ref 
+    if ref
   		@ref_user = User.find @@hashids.decrypt(ref)
   	end
   	@id = session[:user_id]
@@ -17,5 +17,5 @@ class StaticPagesController < ApplicationController
   def thanks
   	@obf_id = @@hashids.encrypt(session[:user_id])
   end
-	
+
 end
