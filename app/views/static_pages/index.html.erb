@@ -38,14 +38,25 @@
 			<h2>We'll send the check.</h2>
 		</div>
 	</div>
-	<div class="row cta">
-		<div class="col-lg-3 col-lg-offset-4 email-input">
-			<%= text_field_tag :email, 'Enter your email address...', :id => 'email-input' %>
+	<% if @ref_code %>
+		<div class="row share">
+			<div class="col-xs-12">
+				Refer your friends and get a month free:
+			</div>
+			<div class="col-xs-12">
+				http://www.rentvelope.com/?ref=<%= @ref_code %>
+			</div>
 		</div>
-		<div class="col-lg-1 submit-button">
-			Invite me
+	<% else %>
+		<div class="row cta">
+			<div class="col-lg-3 col-lg-offset-4 email-input">
+				<%= text_field_tag :email, 'Enter your email address...', :id => 'email-input' %>
+			</div>
+			<div class="col-lg-1 submit-button">
+				Get early access
+			</div>
 		</div>
-	</div>
+	<% end %>
 </div>
 <div class="row">
 	<div class="response col-xs-12"></div>
@@ -95,14 +106,17 @@
 			<tr>
 			  <td>Bank Account</td>
 			  <td>$7.99</td>
+			  <td>flat fee</td>
 			</tr>
 			<tr>
 			  <td>Debit Card</td>
 			  <td>1.5%</td>
+			  <td>of rent</td>
 			</tr>
 			<tr>
 			  <td>Credit Card</td>
 			  <td>2%</td>
+			  <td>of rent</td>
 			</tr>
 		</table>
 	</div>

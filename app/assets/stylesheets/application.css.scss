@@ -210,6 +210,9 @@ body {
 		text-align: left;
 		td {
 			padding: .5em 1em;
+			&:last-child {
+				font-size: .5em;
+			}
 		}
 	}
 }
