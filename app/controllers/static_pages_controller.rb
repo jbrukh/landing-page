@@ -2,7 +2,7 @@ require 'hashids'
 
 class StaticPagesController < ApplicationController
 
-  @@hashids = Hashids.new('salt', 8)
+  @@hashids = Hashids.new('norman mailer', 8)
 
   # index
   def index
@@ -15,7 +15,7 @@ class StaticPagesController < ApplicationController
   end
 
   def thanks
-  	@obf_id = @@hashids.encrypt(session[:user_id])
+    @obf_id = @@hashids.encrypt(session[:user_id]) if session[:user_id]
   end
 
 end

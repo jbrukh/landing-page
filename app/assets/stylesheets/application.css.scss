@@ -40,6 +40,27 @@ body {
 	color: $col-space;
 }
 
+.info-row {
+	h1 {
+		font-size: 3.5em;
+		font-weight: 100;
+		strong {
+			font-weight: 600;
+		}
+	}
+}
+
+h1 {
+	font-size: 5em;
+	font-weight: 400 !important;
+}
+
+h2,h3,h4,h5,h6 {
+	font-weight: 100;
+}
+
+/* TOP NAV */
+
 .top-nav {
 	width: 100%;
 	font-size: 2em;
@@ -71,25 +92,6 @@ body {
 		margin: 1em;
 	}
 
-}
-
-.info-row {
-	h1 {
-		font-size: 3.5em;
-		font-weight: 100;
-		strong {
-			font-weight: 600;
-		}
-	}
-}
-
-h1 {
-	font-size: 5em;
-	font-weight: 400 !important;
-}
-
-h2,h3,h4,h5,h6 {
-	font-weight: 100;
 }
 
 .hero {
@@ -131,68 +133,30 @@ h2,h3,h4,h5,h6 {
 		font-weight: 400;
 	}
 
-		margin-top: 2em;
-		.email-input {
-			padding: 0;
-			color: $col-dark;
-			text-transform: uppercase;
-			input {
-				width: 100%;
-				border: 0;
-				outline: none;
-				padding: .5em;
-			}
-		}
-
-		.submit-button {
-			background-color: darkgrey;
-			padding: .5em;
-			cursor: pointer;
-		}
-	}
-
-	.modal-content {
-		background-color: $col-dark;
-		color: $col-space;
-	}
-
-	.modal-content {
-		background-color: $col-dark;
-		color: $col-space;
-
-	.modal-body {
-		padding: 4em;
-		text-align: center;
+	.email-input {
+		padding: 0;
+		color: $col-dark;
+		text-transform: uppercase;
 		input {
-			@include text-field($col-space, $col-space, $outline-border: true);
-			padding-right: 1em;
-		}
-		.logo {
 			width: 100%;
-			margin-bottom: 2em;
-		}
-		.copy {
-			font-size: 3.7em;
-			margin-bottom: 2em;
-		}
-
-		.invite-me {
-			@include cta-button($col-space);
+			border: 0;
+			outline: none;
+			padding: .5em;
 		}
 	}
 
-	.envelope {
+	.submit-button {
+		background-color: darkgrey;
+		padding: .5em;
 		cursor: pointer;
-		width: 100%;
-		margin-top: 3.5em;
 	}
+
 }
 
 
-.subhero {
+.how-it-works {
 	@include info-section-light;
 	font-weight: 100;
-
 }
 
 .features {
@@ -212,7 +176,7 @@ h2,h3,h4,h5,h6 {
 	}
 
 	.price-table {
-		font-size: 2em;
+		font-size: 1.5em;
 		margin: 0 auto;
 		text-align: left;
 		td {
@@ -246,6 +210,7 @@ h2,h3,h4,h5,h6 {
 	padding: 6em;
 	.social {
 		background-color: $col-space;
+		color: $col-dark;
 		border-radius: 50%;
 		width: 3em;
 		height: 3em;
