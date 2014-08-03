@@ -20,6 +20,7 @@
 @import "mobile";
 
 $col-dark: #173336;
+$col-dark-2: #333;
 $col-light: #737e89;
 $col-space: white;
 $col-section-1: #47646d;
@@ -55,7 +56,6 @@ body {
 	}
 
 	.navigation-buttons {
-		text-transform: uppercase;
 		span {
 			margin-top: 1.1em;
 			float: right;
@@ -81,7 +81,7 @@ body {
 
 .bottom-nav {
 	background-color: $col-dark;
-	color: $col-light;
+	color: $col-space;
 	padding: 6em;
 	.social {
 		background-color: $col-space;
@@ -103,6 +103,15 @@ body {
 			font-weight: 600;
 		}
 	}
+}
+
+h1 {
+	font-size: 5em;
+	font-weight: 400 !important;
+}
+
+h2,h3,h4,h5,h6 {
+	font-weight: 100;
 }
 
 .hero {
@@ -135,14 +144,6 @@ body {
 		@include cta-button($col-space);
 		font-size: 1.5em;
 	}
-	h1,h2,h3,h4,h5,h6 {
-		font-weight: 100;
-	}
-
-	h1 {
-		font-size: 5em;
-		font-weight: 400;
-	}
 
 	.envelope {
 		height: 20em;
@@ -152,22 +153,23 @@ body {
 	}
 
 	.cta {
-		margin-top: 2em;
+		$padding: .6em;
+		margin: 3em;
+		text-transform: uppercase;
 		.email-input {
 			padding: 0;
 			color: $col-dark;
-			text-transform: uppercase;
 			input {
 				width: 100%;
 				border: 0;
 				outline: none;
-				padding: .5em;
+				padding: $padding;
 			}
 		}
 
 		.submit-button {
-			background-color: darkgrey;
-			padding: .5em;
+			background-color: $col-dark-2;
+			padding: $padding;
 			cursor: pointer;
 		}
 	}
@@ -204,6 +206,10 @@ body {
 	}
 }
 
+.response {
+	background-color: lightblue;
+}
+
 .subhero {
 	@include info-section-light;
 	font-weight: 100;
@@ -218,7 +224,7 @@ body {
 	@include info-section-light;
 	.cc-icon.fa {
 		color: white;
-		background-color: rgb(90, 90, 90);
+		background-color: #575757;
 		padding: 1em 1.8em;
 		border-radius: .25em;
 	}
@@ -231,7 +237,7 @@ body {
 		margin: 0 auto;
 		text-align: left;
 		td {
-			padding: .5em 1em;
+			padding: .25em 1em;
 		}
 	}
 }

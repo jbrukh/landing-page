@@ -25,11 +25,15 @@ function submitEmail(email, $response) {
 		data: {
 			email: email
 		}
+	}).always(function(){
+		$response.animate({
+			height: '1.5em'
+		}, 500);
 	}).success(function(e){
 		$response.text('Stay tuned for updates!');
-		$('.email-form-field').attr('disabled', 'disabled');
+		$('#email').attr('disabled', 'disabled');
 	}).error(function(e){
-		$response.text('This email is invalid.');
+		$response.text('Please enter a valid email address.');
 	});
 }
 
@@ -38,7 +42,7 @@ function submitEmail(email, $response) {
         $('html, body').animate({
             scrollTop: $(this).offset().top + 'px'
         }, 1000);
-        return this; // for chaining...
+        return this;
     }
 })(jQuery);
 
@@ -50,9 +54,11 @@ function registerScroll(el) {
 }
 
 $(function(){
-	var field = $('.email-form-field'),
-		button = $('.invite-me')
-	    form = $('#email-form');
+	var field = $('#email'),
+		button = $('#submit-button'),
+		$response = $('.response');
+
+	field.val(msg);
 
 	field.click(function(){
 		if (firstTime) {
@@ -69,10 +75,7 @@ $(function(){
 	});
 
 	button.click(function(){
-		var email = $('.email-form-field').val();
-		console.log('click : ' + email);
-	
-		submitEmail(email, $('.response'));
+		submitEmail(field.val(), $response);
 	});
 
 	registerScroll('features');
