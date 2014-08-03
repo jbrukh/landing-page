@@ -66,33 +66,11 @@ body {
 		cursor: pointer;
 	}
 
-	.cta-button {
-		border-radius: .3em;
-		border: 1px solid $col-dark;
-		padding: 0em .5em;
-	}
-
 	.logo {
 		height: .6em;
 		margin: 1em;
 	}
 
-}
-
-.bottom-nav {
-	background-color: $col-dark;
-	color: $col-space;
-	padding: 6em;
-	.social {
-		background-color: $col-space;
-		border-radius: 50%;
-		width: 3em;
-		height: 3em;
-		padding-top: 1em;
-		&:not(:last-child) {
-			margin-right: 1em;
-		}
-	}
 }
 
 .info-row {
@@ -210,9 +188,6 @@ h2,h3,h4,h5,h6 {
 	}
 }
 
-.response {
-	background-color: lightblue;
-}
 
 .subhero {
 	@include info-section-light;
@@ -263,4 +238,20 @@ h2,h3,h4,h5,h6 {
 .email-form-field {
 	@include text-field($col-space, $col-dark);
 	margin-bottom: 1em;
+}
+
+.bottom-nav {
+	background-color: $col-dark;
+	color: $col-space;
+	padding: 6em;
+	.social {
+		background-color: $col-space;
+		border-radius: 50%;
+		width: 3em;
+		height: 3em;
+		padding-top: 1em;
+		&:not(:last-child) {
+			margin-right: 1em;
+		}
+	}
 }

@@ -31,11 +31,8 @@ function submitEmail($emailInput, $response) {
 		}, 500);
 	}).success(function(e){
 		$response.text('Stay tuned for updates!');
-<<<<<<< HEAD
-		$('#email').attr('disabled', 'disabled');
-=======
+
 		$emailInput.attr('disabled', 'disabled');
->>>>>>> 52150c5919222bb014060d917f36fd0b8d6e417f
 	}).error(function(e){
 		$response.text('Please enter a valid email address.');
 	});
@@ -57,19 +54,13 @@ function registerScroll(el) {
 	});
 }
 
-$(function(){
-<<<<<<< HEAD
-	var field = $('#email'),
-		button = $('#submit-button'),
+$(function() {
+
+	var field = $('#email-input'),
+		button = $('.submit-button'),
 		$response = $('.response');
 
-	field.val(msg);
-=======
-	var field = $('#email-input'),
-		button = $('.submit-button');
->>>>>>> 52150c5919222bb014060d917f36fd0b8d6e417f
-
-	field.click(function(){
+	field.click(function() {
 		if (firstTime) {
 			field.val('');
 			firstTime = false;
@@ -84,11 +75,7 @@ $(function(){
 	});
 
 	button.click(function(){
-<<<<<<< HEAD
-		submitEmail(field.val(), $response);
-=======
-		submitEmail(field, $('.response'));
->>>>>>> 52150c5919222bb014060d917f36fd0b8d6e417f
+		submitEmail(field, $response);
 	});
 
 	registerScroll('features');
